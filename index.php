@@ -29,8 +29,8 @@ session_start();
 <div class="columns is-centered">
   <div class="column"></div>
   <div class="column titre ">
-    <p class="title is-1 ">Accueil</p>
-    <p class="subtitle is-3 ">Subtitle 3</p>
+    <p class="title is-1 ">PetList</p>
+    <p class="subtitle is-3 ">la "tout doux" list <br/>au poil !</p>
   </div>
   <div class="column"></div>
 </div>

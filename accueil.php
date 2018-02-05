@@ -1,15 +1,15 @@
 <?php
 session_start();
 if (!isset($_SESSION['username'])) {
-	header ('Location: index.php');
-	ChromePhp::log($_SESSION);
-	exit();
+    header('Location: index.php');
+    ChromePhp::log($_SESSION);
+    exit();
 }
 include "ChromePhp.php";
 ?>
 <html>
 <head>
-  <title>Espace accueil</title>
+  <title>Home</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css"</link>
 	<link rel="stylesheet" href="style.css" type="text/css"</link>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
@@ -21,21 +21,29 @@ include "ChromePhp.php";
   <div class="navbar-brand">
 		<a class="navbar-item"
 			<span class="icon is-large"><i class="fas fa-3x fa-paw"></i></span>
-			<p class="navTitle"> PetList</p>
+			<p class="navTitle">PetList</p>
 		</a>
-  </div>
-	<div class="navbar-end">
-	<div class="navbar-item">
-		<div class="field is-grouped">
-			<p class="control">
-				<a class="button is-primary" href="deconnexion.php">
-					<span class="icon">
-						<i class="fas fa-sign-out-alt"></i>
-					</span>
-	    	<span>Déconnexion</span>
-				</a>
-			</p>
-		</div>
+		<button class="button navbar-burger" data-target="myMenu">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+	</div>
+		<div id="myMenu" class="navbar-menu">
+			<div class="navbar-end">
+				<div class="navbar-item">
+					<div class="field is-grouped">
+						<p class="control">
+							<a class="button is-primary" href="deconnexion.php">
+								<span class="icon">
+									<i class="fas fa-sign-out-alt"></i>
+								</span>
+	    					<span>Déconnexion</span>
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
 	</div>
 </div>
 </nav>
@@ -66,13 +74,13 @@ include "ChromePhp.php";
 $con = mysqli_connect("localhost", "root", "root", "test");
 
 if (mysqli_connect_errno()) {
-		echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 $id=$_SESSION['id'];
 $query = "SELECT * FROM `pets` WHERE user='$id'";
 $result = mysqli_query($con, $query) or die(mysql_error());
 while ($data = mysqli_fetch_array($result)) {
-switch ($data['specie']) {
+    switch ($data['specie']) {
     case "Chat":
     $img='img/cat.jpg';
         break;
@@ -95,8 +103,8 @@ switch ($data['specie']) {
     $img='img/cobaye.jpg';
         break;
 };
-	// on affiche les résultats
-  echo "
+    // on affiche les résultats
+    echo "
 	  <div class='column is-one-quarter'>
 	<div class='card'>
 <div class='card-image'>
@@ -122,22 +130,22 @@ switch ($data['specie']) {
 
     <div class='content'>
 		";
-		if($data['birthdate'] !== ""){
-			echo "naissance le : " .$data['birthdate']. "<br>";
-		};
-		if($data['description'] !== ""){
-			echo $data['description']. "<br>";
-		};
-		if($data['food'] !== ""){
-			echo	"il aime manger : " .$data['food']."<br>";
-		};
-		echo "
+    if ($data['birthdate'] !== "") {
+        echo "naissance le : " .$data['birthdate']. "<br>";
+    };
+    if ($data['description'] !== "") {
+        echo $data['description']. "<br>";
+    };
+    if ($data['food'] !== "") {
+        echo	"il aime manger : " .$data['food']."<br>";
+    };
+    echo "
 	</div>
   </div>
 	</div>
 </div>";
 }
-mysqli_free_result ($result);
+mysqli_free_result($result);
 ?>
 </div>
 </div>
