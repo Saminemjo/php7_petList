@@ -178,7 +178,7 @@ ChromePhp::log($_SESSION);
   <div class="container">
     <div class="content has-text-centered">
       <p>
-        <strong>PetList</strong> by <a href="www.linkedin.com/in/sabrina-mardjoeki">Sabrina Mardjoeki</a>. The source code is here
+        <strong>PetList</strong> by <a href="http://www.linkedin.com/in/sabrina-mardjoeki">Sabrina Mardjoeki</a>. The source code is here
         <a href="https://github.com/Saminemjo">
 					<span class="icon"><i class="fab fa-github"></i>
 				</span></a>.
