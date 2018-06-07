@@ -60,10 +60,10 @@ ChromePhp::log($dataArray);
   <div class="hero-body">
     <div class="container">
       <h1 class="title">
-  			Editer la fiche de votre compagnon
+  			Editer les informations
       </h1>
       <h2 class="subtitle">
-        Primary subtitle
+        Modifiez la fiche de votre compagnon
       </h2>
     </div>
   </div>

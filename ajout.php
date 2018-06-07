@@ -47,10 +47,10 @@ ChromePhp::log($_SESSION);
   <div class="hero-body">
     <div class="container">
       <h1 class="title">
-  			Remplissez la fiche de votre compagnon
+  			Ajouter un Compagnon
       </h1>
       <h2 class="subtitle">
-        Primary subtitle
+        Remplissez la fiche de votre animal de compagnie
       </h2>
     </div>
   </div>

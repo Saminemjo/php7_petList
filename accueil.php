@@ -56,7 +56,7 @@ include "ChromePhp.php";
 	Bienvenue <?php echo htmlentities(trim($_SESSION['username'])); ?> !<br />
 			</h1>
 			<h2 class="subtitle">
-				Commence à ajouter la fiche de tes compagnons préférés !
+				Commence à ajouter les fiches de tes petits compagnons préférés !
 			</h2>
 			<a class="button is-success is-inverted" href="ajout.php">
 				<span class="icon">

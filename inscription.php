@@ -21,7 +21,7 @@
       Inscription
       </h1>
       <h2 class="subtitle">
-        Primary subtitle
+        Inscrivez vos informations pour nous rejoindre
       </h2>
     </div>
   </div>
